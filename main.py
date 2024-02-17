@@ -4,7 +4,7 @@ import os
 
 def enter_to_clear():
     input(">")
-    os.system("cls || clear")
+    os.system("cls||clear")
 
 
 def print_board(board):
@@ -49,6 +49,17 @@ def create_board(size):
     return board
 
 
+def check_win(board, ships):
+    count = 0
+    for arr in board:
+        for tile in arr:
+            if tile == "X":
+                count += 1
+    if count == ships:
+        return True
+    return False
+
+
 def next_round(player, board, enemy_board):
     print(f"{player} round, click enter to continue")
     enter_to_clear()
@@ -57,15 +68,13 @@ def next_round(player, board, enemy_board):
     print("where you wanna shoot? (write x and y  cords like when setting ships)")
     while True:
         error = False
-        is_ship = False
         player_input = input(">")
         input_array = player_input.split(" ")
         if "0" in input_array:
             error = True
         else:
             try:
-                if board[int(input_array[1]), int(input_array[0])] == "|":
-                    is_ship = True
+                if enemy_board[int(input_array[1]), int(input_array[0])] == "|":
                     print("hit and sink (tell it to the 2nd player)")
                     enemy_board[int(input_array[1]), int(input_array[0])] = "X"
             except:
@@ -91,7 +100,15 @@ if __name__ == '__main__':
     print_board(b2)
     print("click enter to continue")
     enter_to_clear()
-    next_round("player1", b1, b2)
-    next_round("player2", b2, b1)
-
-
+    winner = ""
+    while True:
+        next_round("player1", b1, b2)
+        if check_win(b2, 2):
+            winner = "player1"
+            break
+        next_round("player2", b2, b1)
+        if check_win(b1, 2):
+            winner = "player2"
+            break
+    print(f"player {winner} won!")
+    input()
