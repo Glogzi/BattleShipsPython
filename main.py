@@ -14,10 +14,12 @@ def print_board(board):
         print("")
 
 
-def set_ships(board, ships, size):
+def set_ships(ships, size):
     print("set ship by writing coordinates where you want to place it")
     print("example: \"2 3\". this will place ship on x=2 y=3 tile")
     while True:
+        board = create_board(size)
+        print_board(board)
         error = False
         for i in range(ships):
             player_input = input(">")
@@ -32,9 +34,9 @@ def set_ships(board, ships, size):
                         board[int(input_array[1]), int(input_array[0])] = "|"
                 except:
                     error = True
+            print_board(board)
         if not error:
             return board
-        board = create_board(size)
         print("error, set tiles again, now correctly")
 
 
@@ -85,17 +87,14 @@ def next_round(player, board, enemy_board):
 
 
 if __name__ == '__main__':
-    b1 = create_board(5)
-    b2 = create_board(5)
-
     print("player 1 now will set ships")
-    set_ships(b1, 2, 5)
+    b1 = set_ships(2, 5)
     print("that's your board, do not show it to player 2")
     print_board(b1)
     print("to let player 2 set ships click enter")
     enter_to_clear()
     print("player 2 now will set ships")
-    set_ships(b2, 2, 5)
+    b2 = set_ships(2, 5)
     print("that's your board, do not show it to player 1")
     print_board(b2)
     print("click enter to continue")
