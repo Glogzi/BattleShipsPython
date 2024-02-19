@@ -10,6 +10,7 @@ if __name__ == '__main__':
     b1 = bs.set_ships(ships_num, size)
     b12 = bs.create_board(size)
     print("that's your board, do not show it to player 2")
+    bs.enter_to_clear()
     print("to let player 2 set ships click enter")
     bs.enter_to_clear()
     print("player 2 now will set ships")

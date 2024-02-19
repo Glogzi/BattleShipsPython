@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="848298ea-5006-4737-8f2e-77d20a9418c6" name="Changes" comment="now you can see hidden enemy board, that show tiles,&#10;after shooting">
+    <list default="true" id="848298ea-5006-4737-8f2e-77d20a9418c6" name="Changes" comment="bugfix, game was crushing when wrong input while&#10;setting ships or shooting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bs.py" beforeDir="false" afterPath="$PROJECT_DIR$/bs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +150,8 @@
       <workItem from="1708332565057" duration="1540000" />
       <workItem from="1708334504381" duration="541000" />
       <workItem from="1708336125519" duration="78000" />
+      <workItem from="1708337782820" duration="409000" />
+      <workItem from="1708339080015" duration="563000" />
     </task>
     <task id="LOCAL-00001" summary="function create_board">
       <option name="closed" value="true" />
@@ -189,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708334015379</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bugfix, game was crushing when wrong input while&#10;setting ships or shooting">
+      <option name="closed" value="true" />
+      <created>1708338095903</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708338095904</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,12 +235,13 @@
     <MESSAGE value="fixed setting ships" />
     <MESSAGE value="added errors name after except, to make it more&#10;readable or something, idk" />
     <MESSAGE value="now you can see hidden enemy board, that show tiles,&#10;after shooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="now you can see hidden enemy board, that show tiles,&#10;after shooting" />
+    <MESSAGE value="bugfix, game was crushing when wrong input while&#10;setting ships or shooting" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix, game was crushing when wrong input while&#10;setting ships or shooting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1708254559972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1708190363489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BattleShipsPython$test.coverage" NAME="test Coverage Results" MODIFIED="1708197874328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/BattleShipsPython$main.coverage" NAME="main Coverage Results" MODIFIED="1708333874644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BattleShipsPython$main.coverage" NAME="main Coverage Results" MODIFIED="1708339098404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

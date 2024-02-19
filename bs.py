@@ -117,14 +117,15 @@ def next_round(player, board, enemy_board, hidden_enemy_board):
         else:
             try:
                 if enemy_board[int(input_array[1]), int(input_array[0])] == "|":
-                    print("hit and sink (tell it to the 2nd player)")
+                    print("hit and sink (tell it to the 2nd player), click enter to continue")
                     enemy_board[int(input_array[1]), int(input_array[0])] = "X"
                     hidden_enemy_board[int(input_array[1]), int(input_array[0])] = "X"
                 else:
-                    print("miss")
+                    print("miss, click enter to continue")
                     hidden_enemy_board[int(input_array[1]), int(input_array[0])] = "-"
             except (IndexError, ValueError):
                 error = True
         if not error:
+            enter_to_clear()
             return board
         print("error, set tiles again, now correctly")
