@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="848298ea-5006-4737-8f2e-77d20a9418c6" name="Changes" comment="fixed setting ships">
+    <list default="true" id="848298ea-5006-4737-8f2e-77d20a9418c6" name="Changes" comment="added errors name after except, to make it more&#10;readable or something, idk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bs.py" beforeDir="false" afterPath="$PROJECT_DIR$/bs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="b6f7f2f2a69fcad5a9dc04501008f536d53e3743" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +58,7 @@
     "Python.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "54c77384",
+    "git-widget-placeholder": "branch-to-fix-detached",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Krzysztof/PycharmProjects/BattleShipsPython/main.py",
     "node.js.detected.package.eslint": "true",
@@ -146,6 +147,7 @@
       <workItem from="1708196486146" duration="1381000" />
       <workItem from="1708252192515" duration="4045000" />
       <workItem from="1708256883955" duration="2467000" />
+      <workItem from="1708332565057" duration="1374000" />
     </task>
     <task id="LOCAL-00001" summary="function create_board">
       <option name="closed" value="true" />
@@ -171,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708256128208</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added errors name after except, to make it more&#10;readable or something, idk">
+      <option name="closed" value="true" />
+      <created>1708331217092</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708331217092</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,12 +213,13 @@
     <MESSAGE value="function create_board" />
     <MESSAGE value="function set_ships" />
     <MESSAGE value="fixed setting ships" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed setting ships" />
+    <MESSAGE value="added errors name after except, to make it more&#10;readable or something, idk" />
+    <option name="LAST_COMMIT_MESSAGE" value="added errors name after except, to make it more&#10;readable or something, idk" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1708254559972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1708190363489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BattleShipsPython$test.coverage" NAME="test Coverage Results" MODIFIED="1708197874328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/BattleShipsPython$main.coverage" NAME="main Coverage Results" MODIFIED="1708198032734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BattleShipsPython$main.coverage" NAME="main Coverage Results" MODIFIED="1708331608672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

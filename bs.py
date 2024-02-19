@@ -100,11 +100,13 @@ def check_win(board, ships):
     return False
 
 
-def next_round(player, board, enemy_board):
+def next_round(player, board, enemy_board, hidden_enemy_board):
     print(f"{player} round, click enter to continue")
     enter_to_clear()
     print("that's your board")
     print_board(board)
+    print("that's enemy board")
+    print_board(hidden_enemy_board)
     print("where you wanna shoot? (write x and y  cords like when setting ships)")
     while True:
         error = False
@@ -117,6 +119,10 @@ def next_round(player, board, enemy_board):
                 if enemy_board[int(input_array[1]), int(input_array[0])] == "|":
                     print("hit and sink (tell it to the 2nd player)")
                     enemy_board[int(input_array[1]), int(input_array[0])] = "X"
+                    hidden_enemy_board[int(input_array[1]), int(input_array[0])] = "X"
+                else:
+                    print("miss")
+                    hidden_enemy_board[int(input_array[1]), int(input_array[0])] = "-"
             except IndexError:
                 error = True
         if not error:
