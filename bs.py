@@ -129,3 +129,8 @@ def next_round(player, board, enemy_board, hidden_enemy_board):
             enter_to_clear()
             return board
         print("error, set tiles again, now correctly")
+
+
+if __name__ == '__main__':
+    print("please open main.py, this file contains only functions")
+    input("")
