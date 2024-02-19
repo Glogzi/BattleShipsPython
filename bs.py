@@ -70,7 +70,7 @@ def set_ships(ships, br_size):
                         error = True
                     else:
                         board[int(input_array[1]), int(input_array[0])] = "|"
-                except IndexError:
+                except (IndexError, ValueError):
                     error = True
             print_board(board)
         if not error:
@@ -123,7 +123,7 @@ def next_round(player, board, enemy_board, hidden_enemy_board):
                 else:
                     print("miss")
                     hidden_enemy_board[int(input_array[1]), int(input_array[0])] = "-"
-            except IndexError:
+            except (IndexError, ValueError):
                 error = True
         if not error:
             return board
