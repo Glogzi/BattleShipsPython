@@ -5,16 +5,16 @@ import os
 def set_ships_num(br_size):
     inp = 2
     while True:
-        noterr = True
+        not_err = True
         try:
             inp = int(input(">"))
-        except:
-            noterr = False
+        except ValueError:
+            not_err = False
         if inp > br_size:
-            noterr = False
+            not_err = False
         if inp < 1:
-            noterr = False
-        if not noterr:
+            not_err = False
+        if not not_err:
             print("incorrect number of ships, number cannot be larger or equal to board size, and smaller than 1")
             continue
         break
@@ -24,16 +24,16 @@ def set_ships_num(br_size):
 def set_board_size():
     inp = 5
     while True:
-        noterr = True
+        not_err = True
         try:
             inp = int(input(">"))
-        except:
-            noterr = False
+        except ValueError:
+            not_err = False
         if inp > 9:
-            noterr = False
+            not_err = False
         if inp < 2:
-            noterr = False
-        if not noterr:
+            not_err = False
+        if not not_err:
             print("incorrect board size, please enter size not larger than 9 and not smaller than 2")
             continue
         break
@@ -70,7 +70,7 @@ def set_ships(ships, br_size):
                         error = True
                     else:
                         board[int(input_array[1]), int(input_array[0])] = "|"
-                except:
+                except (IndexError, ValueError):
                     error = True
             print_board(board)
         if not error:
@@ -100,11 +100,13 @@ def check_win(board, ships):
     return False
 
 
-def next_round(player, board, enemy_board):
+def next_round(player, board, enemy_board, hidden_enemy_board):
     print(f"{player} round, click enter to continue")
     enter_to_clear()
     print("that's your board")
     print_board(board)
+    print("that's enemy board")
+    print_board(hidden_enemy_board)
     print("where you wanna shoot? (write x and y  cords like when setting ships)")
     while True:
         error = False
@@ -115,10 +117,20 @@ def next_round(player, board, enemy_board):
         else:
             try:
                 if enemy_board[int(input_array[1]), int(input_array[0])] == "|":
-                    print("hit and sink (tell it to the 2nd player)")
+                    print("hit and sink (tell it to the 2nd player), click enter to continue")
                     enemy_board[int(input_array[1]), int(input_array[0])] = "X"
-            except:
+                    hidden_enemy_board[int(input_array[1]), int(input_array[0])] = "X"
+                else:
+                    print("miss, click enter to continue")
+                    hidden_enemy_board[int(input_array[1]), int(input_array[0])] = "-"
+            except (IndexError, ValueError):
                 error = True
         if not error:
+            enter_to_clear()
             return board
         print("error, set tiles again, now correctly")
+
+
+if __name__ == '__main__':
+    print("please open main.py, this file contains only functions")
+    input("")
