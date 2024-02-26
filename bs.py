@@ -148,3 +148,8 @@ def next_round(player, board, enemy_board, hidden_enemy_board):
         if not error:
             return board
         print("error, set tiles again, now correctly")
+
+
+if __name__ == '__main__':
+    print("please open main.py, this is only functions file")
+    input("press enter to close")
