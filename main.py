@@ -30,4 +30,4 @@ if __name__ == '__main__':
             winner = "player2"
             break
     print(f"player {winner} won!")
-    input()
+    input("press enter to close")
